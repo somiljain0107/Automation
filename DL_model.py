@@ -2,6 +2,7 @@
 # coding: utf-8
 
 
+
 from keras.models import Sequential
 from keras.layers import MaxPool2D, Conv2D, Flatten, Dense, Dropout
 from keras.datasets import fashion_mnist
