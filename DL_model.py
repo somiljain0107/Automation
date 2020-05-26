@@ -33,7 +33,7 @@ class myCallback(Callback):
             directory='/root/Automation/accuracy_dl.txt' 
             var=logs.get('accuracy')
             with open(directory, 'w') as write:
-                write.write(np.array2string(var))
+                write.write(np.array2string(var*100))
 
 
 
