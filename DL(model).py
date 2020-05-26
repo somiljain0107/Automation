@@ -27,7 +27,7 @@ model = Sequential()
 model.add(Conv2D(32, (3,3), activation = 'relu', input_shape = (28,28,1) ))
 model.add(MaxPool2D(pool_size=(2, 2) ))
 model.add(Flatten())
-model.add(Dense(128, activation = 'relu'))
+model.add(Dense(256, activation = 'relu'))
 model.add(Dense(10,  activation = 'softmax'))          
 
 model.summary()
@@ -35,7 +35,7 @@ model.summary()
 class myCallback(Callback):
       def on_epoch_end(self, epoch, logs={}):
           
-            directory='/root/DL_A/accuracy.txt' 
+            directory='/root/Automation/accuracy_dl.txt' 
             var=logs.get('accuracy')
             with open(directory, 'w') as write:
                 write.write(np.array2string(var))
@@ -47,7 +47,10 @@ callbacks = myCallback()
 
 model.compile(optimizer='adam', loss = 'sparse_categorical_crossentropy', metrics=['accuracy'] )
 
+no_of_epochs=5
+history = model.fit(X_train, y_train, epochs=no_of_epochs, callbacks=[callbacks])
 
-history = model.fit(X_train, y_train, epochs=10, callbacks=[callbacks])
+model.save("myDLmodel.h5")
+print("Your Model Has Been Saved")
 
 
