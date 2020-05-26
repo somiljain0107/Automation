@@ -7,6 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
 datin=pd.read_csv("/root/Automation/train.csv")
 data16 = datin[['Pclass', 'Sex', 'Age', 'Parch','SibSp','Fare','Embarked']]
 y=datin['Survived']
@@ -39,6 +40,7 @@ model= LogisticRegression()
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 report=classification_report(y_test,y_pred)
+cm=confusion_matrix(y_test,y_pred)
 accuracy=(cm.diagonal().sum()/cm.sum())*100
 print(report)
 print(accuracy)
