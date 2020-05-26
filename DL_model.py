@@ -2,8 +2,6 @@
 # coding: utf-8
 
 
-
-
 from keras.models import Sequential
 from keras.layers import MaxPool2D, Conv2D, Flatten, Dense, Dropout
 from keras.datasets import fashion_mnist
@@ -44,8 +42,3 @@ model.compile(optimizer='adam', loss = 'sparse_categorical_crossentropy', metric
 
 no_of_epochs=5
 history = model.fit(X_train, y_train, epochs=no_of_epochs, callbacks=[callbacks])
-
-model.save("/root/Automation/myDLmodel.h5")
-print("Your Model Has Been Saved")
-
-
