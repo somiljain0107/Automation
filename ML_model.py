@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
-datin=pd.read_csv("/root/Workspace/train.csv")
+datin=pd.read_csv("/root/Automation/train.csv")
 
 data16 = datin[['Pclass', 'Sex', 'Age', 'Parch','SibSp','Fare','Embarked']]
 y=datin['Survived']
