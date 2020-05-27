@@ -12,7 +12,7 @@ mail_content = "Hey Developer the accuracy of your Deep Learning model has alrea
 
 #The mail addresses and password
 sender_address = 'namantanuj@gmail.com'
-sender_pass = 'GCVEEVur'
+sender_pass = '*****'
 receiver_address = '18ume029@lnmiit.ac.in'
 
 
