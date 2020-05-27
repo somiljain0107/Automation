@@ -6,10 +6,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 
-mail_content = "Hey Developer,
-the accuracy of your Machine Learning model has already been optimized! Now, you can work on your another project! 
-Regards,
-The Automation Team!"
+mail_content = "Hey Developer the accuracy of your Machine Learning model has already been optimized! Now you can work on your another project!The Automation Team!"
 
 #The mail addresses and password
 sender_address = 'namantanuj@gmail.com'
